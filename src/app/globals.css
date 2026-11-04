@@ -756,3 +756,9 @@ button,input,select,textarea { font-family:inherit; }
   .route-frame,.route-progress,.nav-link.active,.modal-back,.modal,.command-backdrop,.command-dialog { animation:none!important; }
   .route-transition,.side.mobile-nav-panel,.mobile-nav-backdrop { transition:none!important; }
 }
+
+.page-loading-overlay { position:fixed;inset:0;z-index:48;display:grid;place-items:center;background:#f3f6f9a6;backdrop-filter:blur(3px);animation:overlay-in .16s ease-out both; }
+.page-loading-card { display:flex;min-width:148px;min-height:126px;flex-direction:column;align-items:center;justify-content:center;gap:29px;padding:18px 23px;border:1px solid #e1e8ee;border-radius:16px;background:#ffffffed;box-shadow:0 16px 48px #172b4218;color:#52677a;font-size:11px;font-weight:620;letter-spacing:.15px; }
+.loader { --d:22px;position:relative;display:block;width:4px;height:4px;border-radius:50%;color:#25b09b;box-shadow:calc(1*var(--d)) calc(0*var(--d)) 0 0,calc(.707*var(--d)) calc(.707*var(--d)) 0 1px,calc(0*var(--d)) calc(1*var(--d)) 0 2px,calc(-.707*var(--d)) calc(.707*var(--d)) 0 3px,calc(-1*var(--d)) calc(0*var(--d)) 0 4px,calc(-.707*var(--d)) calc(-.707*var(--d)) 0 5px,calc(0*var(--d)) calc(-1*var(--d)) 0 6px;animation:l27 1s infinite steps(8); }
+@keyframes l27 { 100% { transform:rotate(1turn); } }
+@media (max-width:760px) { .page-loading-card { min-width:138px;min-height:116px;border-radius:14px; } }
